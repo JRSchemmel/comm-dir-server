@@ -1,0 +1,17 @@
+{
+  "name": "lq-test2",
+  "version": "1.0.0",
+  "description": "Lake Quivira test application for resident/home/dock CRUD (Feb 13, 2019).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jim Schemmel",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "express": "^4.16.4",
+    "node": "^11.9.0",
+    "serve-static": "^1.13.2"
+  }
+}

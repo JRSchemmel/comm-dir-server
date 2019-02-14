@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <link rel="stylesheet" type="text/css" href="home_edit.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <title>Edit Home</title>
+</head>
+
+<body>
+    <div class="container edit-home-container">
+        <div class="title1 home-edit-header1">
+            <h1>Edit 177 Lakeshore Dr S</h1>
+        </div>
+        <div class="home-edit-form1">
+            <form class="myForm1">
+                <label for="number" class="item address-number">Address Number</label>
+                <input type="text" id="number" name="number" class="item" placeholder="177" required><br>
+                <label for="streetname" class="street-name">Street Name</label>
+                <input type="text" id="streetname" placeholder="Lakeshore Dr" required><br>
+                <label for="directions" class="directions">Street Direction</label>
+                <select id="directions" style="font-size: .75em;" required>
+                    <option value="" disabled selected>Select Direction</option>
+                    <option value="N">N</option>
+                    <option value="E">E</option>
+                    <option value="S">S</option>
+                    <option value="W">W</option>
+                </select><br>
+                <label for="dock" class="dock">Dock Number</label>
+                <input type="number" id="dock" placeholder="254" min="1" max="397" required><br>
+                <label>County</label>
+                <select name="county" style="font-size: .75em;">
+                    <option value="" disabled selected>Select County</option>
+                    <option value="Johnson">Johnson</option>
+                    <option value="Wyandotte">Wyandotte</option>
+                </select>
+                <br>
+                <button type="button" name="action" value="update" class="button submit-button">Submit</button>
+                <button type="button" name="action" value="cancel" class="button cancel-button">Cancel</button>
+            </form>
+        </div>
+        <div class="home-edit-header2">
+            <h2>Residents</h2>
+        </div>
+        <div class="home-edit-form2">
+            <form class="myForm2">
+                <div class="resident-list">
+                    <select name="Resident List" style="font-size: .7em;">
+                        <option value="" disabled selected>Select Resident</option>
+                        <option value="Soul Schemmel">Soul Schemmel</option>
+                        <option value="Theo Burgess">Theo Burgess</option>
+                        <option value="Very Long-Named-Person">Very, Very Long-Named-Person</option>
+                    </select>
+                </div>
+                <br>
+            </form>
+        </div>
+        <div class="attach-resident-button">
+            <button type="button" name="action" value="update" class="button attach-resident">Attach Resident</button>
+        </div>
+        <div class="resident1">
+            <p>Burgess, Randy</p>
+        </div>
+        <div class="trash-resident1">
+            <i class="fas fa-trash-alt trash-resident-1"></i>
+        </div>
+        <div class="resident2">
+            <p>Schemmel, Megan</p>
+        </div>
+        <div class="trash-resident2">
+            <i class="fas fa-trash-alt trash-resident-2"></i>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" href="global.css">
+    <link type="text/css" href="create_home.css">
+    <title>Home Index By Address</title>
+</head>
+
+<body>
+    <div class="hero-img">
+        <img class="home-index-hero-img" src="/LQ-CommClub.jpg" alt="Lake Quivira Clubhouse" width="100%" height="auto">
+    </div>
+    <div class="container">
+        <div class="title1 create-home-h1">
+            <h1>Create A Home</h1>
+        </div>
+        <form>
+            <label for="number">Address Number</label>
+            <input type="text" id="number" name="number" placeholder="123" required><br>
+            <label for="streetname">Street Name</label>
+            <input type="text" id="streetname" placeholder="Main St" required><br>
+            <label for="directions">Street Direction</label>
+            <select id="directions" required>
+                <option value="" disabled selected>Select Direction</option>
+                <option value="N">N</option>
+                <option value="E">E</option>
+                <option value="S">S</option>
+                <option value="W">W</option>
+            </select><br>
+            <label for="dock">Dock Number</label>
+            <input type="number" id="dock" placeholder="123" min="1" max="397" required><br>
+            <label>County</label>
+            <select name="county">
+                <option value="" disabled selected>Select County</option>
+                <option value="Johnson">Johnson</option>
+                <option value="Wyandotte">Wyandotte</option>
+            </select>
+            <br>
+            <button type="button" name="action" value="update" class="button">Submit</button>
+            <button type="button" name="action" value="cancel" class="button">Cancel</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/* HOME_EDIT SMALL SCREEN starts*/
+body {
+  display: grid;
+}
+/* EDIT-HOME-CONTAINER GRID for CONTENT Below Hero & Above Footer */
+.edit-home-container {
+    display: grid;
+    grid-template-columns: minmax(80px, auto) 66px 24px 36px minmax(100px, auto) 2fr;
+    grid-template-rows: 60px repeat(5, 40px) 50px 50px 50px 40px 40px;
+    margin: 0 auto;
+    min-width: 320px;
+    min-height: 568px;
+}
+
+/* H1 styling for Home_Edit Page */
+.home-edit-header1 h1 {
+    font-size: 1.2rem;
+}
+
+/* H2 styling for Home_Edit Page */
+.edit-home-container h2 {
+    font-size: 1.1rem;
+}
+
+.edit-home-container p {
+    font-size: .8rem;
+}
+
+/* H1 Grid placement in EDIT-HOME-CONTAINER */
+.home-edit-header1 {
+    align-self: center;
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+    justify-self: left;
+}
+
+/* Form1 Grid placement in EDIT-HOME-CONTAINER */
+.home-edit-form1 {
+    grid-column: 1 / 7;
+    grid-row: 2 / 8;
+}
+
+/* Form1 Grid Layout */
+.myForm1 {
+    display: grid;
+    grid-template-columns: [labels] auto [inputs] auto 1fr;
+    grid-auto-flow: row;
+    grid-gap: .6em .5em;
+}
+
+/* Form1 label styling for Home_Edit Page */
+.myForm1 label {
+    align-self: top;
+    justify-self: right;
+}
+
+.myForm1 input,
+.myForm1 option, {
+    align-self: center;
+}
+
+/* Form1 label & input styling for Home_Edit Page */
+.myForm1 label,{
+    font-size: .8rem;
+    /* width: 140px; */
+}
+
+/* Form1 label & input styling for Home_Edit Page */
+.myForm1 input {
+    font-size: .8rem;
+    width: 140px;
+}
+
+.home-edit-form1 button.submit-button {
+    margin-left: 35px;
+}
+
+/* .home-edit-form1 button.cancel-button {
+    margin-left: -10px;
+} */
+
+/* H2 Grid placement in EDIT-HOME-CONTAINER */
+.home-edit-header2 {
+    grid-column: 1 / 4;
+    grid-row: 8 / 9;
+}
+
+/* Form2 Grid placement in EDIT-HOME-CONTAINER */
+.home-edit-form2 {
+    grid-column: 1 / 5;
+    grid-row: 9 / 10;
+    justify-self: center;
+}
+
+.home-edit-form2 .myForm1 {
+    align-self: center;
+}
+
+/* Attach Resident BUTTON Grid placement in EDIT-HOME-CONTAINER?? */
+div.attach-resident-button {
+    grid-column: 5 / 7;
+    grid-row: 9 / 10;
+    margin-top: -25px;
+    width: 90px;
+}
+
+/* Attach Resident BUTTON Styling */
+.attach-resident-button button {
+    width: 90px;
+}
+
+/* RESIDENTS placement in EDIT-HOME-CONTAINER */
+.resident1 {
+    align-self: center;
+    grid-column: 1 / 4;
+    grid-row: 10 / 11;
+    justify-self: right;
+}
+
+.resident2 {
+    align-self: center;
+    grid-column: 1 / 4;
+    grid-row: 11 / 12;
+    justify-self: right;
+}
+
+/* TRASH RESIDENT BUTTON placement in EDIT-HOME-CONTAINER */
+.trash-resident1 {
+    align-self: center;
+    grid-column: 4 / 5;
+    grid-row: 10 / 11;
+    justify-self: center;
+}
+
+.trash-resident2 {
+    align-self: center;
+    grid-column: 4 / 5;
+    grid-row: 11 / 12;
+    justify-self: center;
+}
+
+/* end of HOME-EDIT */
