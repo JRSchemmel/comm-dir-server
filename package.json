@@ -2,7 +2,7 @@
   "name": "lq-test2",
   "version": "1.0.0",
   "description": "Lake Quivira test application for resident/home/dock CRUD (Feb 13, 2019).",
-  "main": "index.js",
+  "main": "index-express.js",
   "scripts": {
     "start": "node ./bin/www",
     "build": "node server.js",
