@@ -4,6 +4,8 @@
   "description": "Lake Quivira test application for resident/home/dock CRUD (Feb 13, 2019).",
   "main": "index.js",
   "scripts": {
+    "start": "node ./bin/www",
+    "build": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jim Schemmel",
