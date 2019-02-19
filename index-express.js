@@ -6,6 +6,11 @@ var path = require('path');
 
 app.use(express.static(path.join(__dirname, '/images')));
 
+app.get('/', (request, response) => {  //Test if server is actually working.
+  console.log(`URL: ${request.url}`);
+  response.send('Hello, Server!');
+});
+
 app.get('/api/home-data', function(request, response) {  // Uncertain, is home-data name correct?
   response.send(JSON.parse({ key: "value"}));
 })
