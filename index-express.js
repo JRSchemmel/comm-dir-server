@@ -6,7 +6,7 @@ var path = require('path');
 
 app.use(express.static(path.join(__dirname, '/images')));
 
-app.get('/api/home-data', function(req, res) {
+app.get('/api/home-data', function(request, response) {  // Uncertain, is home-data name correct?
   response.send(JSON.parse({ key: "value"}));
 })
 
@@ -46,4 +46,4 @@ app.listen(5000, function() {
   console.log('server is running');
 });
 
-module.exports = app;
+module.exports = app;  //Is "app" correct name?  Confusing!

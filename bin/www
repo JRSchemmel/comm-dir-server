@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../server.js');
+var app = require('../server.js'); /**Uncertain if server.js or index-express.js*/
 var debug = require('debug')('mean-app:server');
 var http = require('http');
 
