@@ -7,8 +7,8 @@ var path = require('path');
 app.use(express.static(path.join(__dirname, '/images')));
 
 app.get('/', (request, response) => {  //Test if server is actually working.
-  console.log(`URL: ${request.url}`);
-  response.send('Hello, Server!');
+  console.log(`URL: ${request.url}`);  //Display URL on console
+  response.send('Hello, Server!');     //Display "Hello, Server!" on web response
 });
 
 app.get('/api/home-data', function(request, response) {  // Uncertain, is home-data name correct?
