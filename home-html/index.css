@@ -1,25 +1,4 @@
+/* start of HOME ADDRESS INDEX Page */
 
+/* only using Global Settings right now */
 
-/* HOME-LANDING page start*/
-
-.hero-img {
-  background-position: center center;
-  background-repeat: no-repeat, repeat;
-  background-size: cover;
-}
-
-.title1-center {
-  margin: .7rem;
-  text-align: center;
-}
-
-.title1-center p{
-  font-size: 1.75rem;
-}
-
-.landing-page-links ul{
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-/* end of Home-Landing page */
