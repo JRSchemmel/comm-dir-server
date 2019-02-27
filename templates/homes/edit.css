@@ -1,6 +1,6 @@
 /* HOME_EDIT SMALL SCREEN starts*/
 body {
-  display: grid;
+    display: grid;
 }
 /* EDIT-HOME-CONTAINER GRID for CONTENT Below Hero & Above Footer */
 .edit-home-container {
@@ -55,12 +55,12 @@ body {
 }
 
 .myForm1 input,
-.myForm1 option, {
+.myForm1 option {
     align-self: center;
 }
 
 /* Form1 label & input styling for Home_Edit Page */
-.myForm1 label,{
+.myForm1 label {
     font-size: .8rem;
     /* width: 140px; */
 }
