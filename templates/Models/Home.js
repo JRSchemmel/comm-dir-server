@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('../../mongoose_basics/node_modules/mongoose');
 var Schema = mongoose.Schema;
 
 var HomeSchema = new Schema({

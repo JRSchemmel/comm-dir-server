@@ -1,4 +1,4 @@
-var Home = require('../templates/models/Home');
+var Home = require('../../Models/Home');
 
 module.exports = {
 
