@@ -1,15 +1,15 @@
 //App for Lake Quivira Community Directory
 var express = require('express');
-var mongoose = require('./mongoose_basics/node_modules/mongoose');
+
 var bodyParser = require('body-parser');
 var routes = require('./routes/routes');
 var app = express();
 var path = require('path');
 app.use(express.static(path.join(__dirname, '/assets/images')));
 
-app.listen(5000, () => {
-  console.log('Running on port 5000');
-});
+//app.listen(5000, () => {
+// console.log('Running on port 5000');
+//});
 
 //var server = app.listen(5000, function () {
 //  var host = server.address().address
@@ -21,23 +21,29 @@ app.listen(5000, () => {
 //  if (err) throw err;
 //  console.log('Successfully connected to mongoose database');
 //});
+
+//mongoose.Promise = require('./mongoose_basics/node_modules/bluebird');
+var mongoose = require('./mongoose_basics/node_modules/mongoose');
 mongoose.Promise = global.Promise;
-mongoose.Promise = require('./mongoose_basics/node_modules/bluebird');
 mongoose.connect('mongodb://localhost:5000/lqdb1', { useNewUrlParser: true,
-  promiseLibrary: require('./mongoose_basics/node_modules/bluebird') })
+  promiseLibrary: require('./mongoose_basics/node_modules/bluebird/js/release/bluebird') })
   .then(() =>  console.log('mongoose connection succesful'))
   .catch((err) => console.error(err));
 
+  app.listen(5000, () => {
+    console.log('Running on port 5000');
+  });
+
 //Routes
 //app.use(require('./routes/routes'));  //http://localhost:5000 (...)
-app.use(bodyParser.json());
-routes(app);
+//app.use(bodyParser.json());
+//routes(app);
 
-app.use((err, req, res, next) => {
-  res.status(422).send({ error: err.message });
-
-  console.log("App listening at http://%s:%s", host, port)
-
-});
+//app.use((err, req, res, next) => {
+//  res.status(422).send({ error: err.message });
+//
+// console.log("App listening at http://%s:%s", host, port)
+//
+//});
 
 module.exports = app;
