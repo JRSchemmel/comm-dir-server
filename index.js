@@ -23,12 +23,26 @@ app.use(express.static(path.join(__dirname, '/assets/images')));
 //});
 
 //mongoose.Promise = require('./mongoose_basics/node_modules/bluebird');
-var mongoose = require('./mongoose_basics/node_modules/mongoose');
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:5000/lqdb1', { useNewUrlParser: true,
-  promiseLibrary: require('./mongoose_basics/node_modules/bluebird/js/release/bluebird') })
-  .then(() =>  console.log('mongoose connection succesful'))
-  .catch((err) => console.error(err));
+//var mongoose = require('./mongoose_basics/node_modules/mongoose');
+//mongoose.Promise = global.Promise;
+//mongoose.connect('mongodb://localhost:5000/data/lqdb1', { useNewUrlParser: true,
+//  promiseLibrary: require('./mongoose_basics/node_modules/bluebird/js/release/bluebird') })
+//  .then(() =>  console.log('mongoose connection succesful'))
+//  .catch((err) => console.error(err));
+
+var MongoClient = require('./mongoose_basics/node_modules/mongodb').MongoClient;
+var assert = require('assert');
+var url = 'mongodb://localhost:5000';
+var dbName = 'lqdb1'; { useNewUrlParser: true };
+var client = new MongoClient(url);
+client.connect(function(err) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+  var db = client.db(dbName);
+
+  client.close();
+});
 
   app.listen(5000, () => {
     console.log('Running on port 5000');
