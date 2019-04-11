@@ -1,9 +1,11 @@
 //This file is used to place "routes" in its own file.
-var express = require('express');
-var app = express();
-var router = express.Router();
+const express = require('express');
+const app = express();
+const router = express.Router();
 app.use(router);
-var path = require('path');
+console.log ('got to router module');
+
+const path = require('path');
 //Middle ware that is specific to this router would go here.
 
 //Define the "Home Page" route.
@@ -12,8 +14,11 @@ router.get("/", function(request, response) {
 });
 //Define the "Home Directory" route.
 router.get("/homes", function(request, response) {
+  console.log ('got to router.get /homes module')
 response.sendFile(path.join(__dirname, "../templates/homes", "index.html"));
 });
+console.log ("get contents are: ", router.get);
+console.log ('got to router.get module');
 //Define the "Home Edit" route.
 router.get("/homesedit", function(request, response) {
   response.sendFile(path.join(__dirname, "../templates/homes", "edit.html"));

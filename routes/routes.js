@@ -1,4 +1,4 @@
-var HomeController = require('../templates/Models/controllers/home_controller');
+const HomeController = require('../templates/Models/controllers/home_controller');
 
 module.exports = (app) => {
   app.post('/api/home', function(req, res){HomeController.create});

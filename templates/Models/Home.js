@@ -1,7 +1,7 @@
-var mongoose = require('../../mongoose_basics/node_modules/mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('../../mongoose_basics/node_modules/mongoose');
+const Schema = mongoose.Schema;
 
-var HomeSchema = new Schema({
+const HomeSchema = new Schema({
   address_number: {
     type: Number,
     required: true
@@ -27,6 +27,6 @@ var HomeSchema = new Schema({
 
 );
 
-var Home = mongoose.model('home', HomeSchema);
+const Home = mongoose.model('home', HomeSchema);
 
 module.exports = Home;
