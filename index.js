@@ -1,20 +1,28 @@
 //App for Lake Quivira Community Directory
 const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const routes = require('./routes/routes');
 const router = require('./routes/router');
-const app = express();
-const path = require('path');
-app.use(express.static(path.join(__dirname, '/assets/images')));
+//const path = require('path');
+//console.log ('path from index file:', require('path'));
+//app.use(express.static(path.join(__dirname, '/assets/images')));
 
 //app.listen(5000, () => {
 //  console.log('Running on port 5000');
 //});
 
-const server = app.listen(5000, function () {
-  const host = server.address().address;
-  const port = server.address().port;
-  console.log('App listening at http://%s:%s', host, port)});
+const connect = require('connect');
+const serveStatic = require('serve-static');
+connect().use(serveStatic(__dirname)).listen(5000, function(){
+    console.log('Server running on 5000...');
+    console.log ('__dirname: ', __dirname);
+});
+
+//const server = app.listen(5000, function () {
+//  const host = server.address().address;
+//  const port = server.address().port;
+//  console.log('App listening at http://%s:%s', host, port)});
 
 //mongoose.Promise = require('./mongoose_basics/node_modules/bluebird');
 const mongoose = require('./mongoose_basics/node_modules/mongoose');
@@ -23,7 +31,7 @@ const mongoose = require('./mongoose_basics/node_modules/mongoose');
 //mongoose.Promise = require('./mongoose_basics/node_modules/bluebird')
 //  .then(() =>  console.log('mongoose promise succesful'))
 //  .catch((err) => console.error(err));
-console.log('I got this far');
+console.log('I got this far in index.js');
 
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost:5000/lqdb1', {useNewUrlParser: true}, function(err) {
