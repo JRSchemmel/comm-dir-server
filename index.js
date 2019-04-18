@@ -15,5 +15,9 @@ const dbPath = 'mongodb://localhost:27017/lgdb1';
 mongoose.connect(dbPath, { useNewUrlParser: true })
   .then(response => console.log('Mongoose connected'))
   .catch(err => console.error('mongoose.connect', err));
+app.use(bodyParser.json());
+routes(app);
+app.use((err, req, res, next) => {
+  res.status(422).send({ error: err.message });});
 
 module.exports = app;

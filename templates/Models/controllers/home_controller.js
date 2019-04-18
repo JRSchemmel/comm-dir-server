@@ -1,4 +1,8 @@
 const Home = require('../../Models/Home');
+//console.log("Made it to the home_controller.js module");
+//const path = require('path');
+//console.log("path.join()/Models/Home: ", path.join(__dirname, "../../Models/Home"));
+//console.log(Home);
 
 module.exports = {
 
@@ -9,7 +13,6 @@ module.exports = {
       .then(home => res.send(home))
       .catch(next)
   },
-
 
   create(req, res, next) {
     const homeProps = req.body;
